@@ -16,8 +16,12 @@ export default function Home() {
       <div>
         <Card />
       </div>
-      <Card />
-
+      <div>
+        <Card />
+      </div>
+      <div>
+        <Card />
+      </div>
       <div>
         <Footer />
       </div>
