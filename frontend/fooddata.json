@@ -1,0 +1,78 @@
+[
+    {
+        "CategoryName":"Rice",
+        "name":"Veg Fried Rice",
+        "img":"",
+        "options":[
+            {
+                "half":"80",
+                "full":"160"
+            }
+        ],
+        "description":"Made using Indian masalas ans Basmati Rice"
+    },
+    {
+        "CategoryName":"Rice",
+        "name":"Veg Biriyani",
+        "img":"",
+        "options":[
+            {
+                "half":"70",
+                "full":"140"
+            }
+        ],
+        "description":"Made using Indian masalas ans Basmati Rice"
+    },
+    {
+        "CategoryName":"Starter",
+        "name":"Gobi Manchurian",
+        "img":"",
+        "options":[
+            {
+                "half":"90",
+                "full":"180"
+            }
+        ],
+        "description":"Made using Indian masalas ans Basmati Rice"
+    },
+    {
+        "CategoryName":"Starter",
+        "name":"Panneer Tikka",
+        "img":"",
+        "options":[
+            {
+                "half":"80",
+                "full":"160"
+            }
+        ],
+        "description":"Made using Indian masalas ans Basmati Rice"
+    },
+    {
+        "CategoryName":"Pizza",
+        "name":"Margherita",
+        "img":"",
+        "options":[
+            {
+                "regular":"100",
+                "medium":"120",
+                "large":"180"
+            }
+        ],
+        "description":"Made using Indian masalas ans Basmati Rice"
+    },
+    {
+        "CategoryName":"Pizza",
+        "name":"Farmhouse Pizza",
+        "img":"",
+        "options":[
+            {
+                "regular":"100",
+                "medium":"200",
+                "large":"250"
+            }
+        ],
+        "description":"Made using Indian masalas ans Basmati Rice"
+    }
+
+
+]
