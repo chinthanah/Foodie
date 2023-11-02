@@ -1,7 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Navbar() {
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    localStorage.removeItem("authToken");
+    navigate("/login");
+  };
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -21,34 +26,50 @@ export default function Navbar() {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0 fs-5 my-2">
               <li className="nav-item">
-                <Link className="nav-link" aria-current="page" to="/">
+                <Link
+                  className="nav-link active fs-5"
+                  aria-current="page"
+                  to="/"
+                >
                   Home
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/login">
+              {localStorage.getItem("authToken") ? (
+                <li className="nav-item">
+                  <Link
+                    className="nav-link active fs-5"
+                    aria-current="page"
+                    to="/"
+                  >
+                    My Orders
+                  </Link>
+                </li>
+              ) : (
+                ""
+              )}
+            </ul>
+            {localStorage.getItem("authToken") ? (
+              <div>
+                <div
+                  className="btn bg-dark text-white mx-2"
+                  onClick={handleLogout}
+                >
+                  Logout
+                </div>
+                <div className="btn bg-dark text-white mx-2">My Cart</div>
+              </div>
+            ) : (
+              <div className="d-flex btn bg-dark text-white mx-2 mb-1">
+                <Link className="nav-link mx-2 fs-0.9" to="/login">
                   Login
                 </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/createuser">
-                  Signup
+                <Link className="nav-link mx-2 fs-0.9" to="/login">
+                  Sign in
                 </Link>
-              </li>
-            </ul>
-            <form className="d-flex" role="search">
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button className="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
+              </div>
+            )}
           </div>
         </div>
       </nav>
