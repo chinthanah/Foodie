@@ -58,7 +58,10 @@ export default function Navbar() {
                 >
                   Logout
                 </div>
-                <div className="btn bg-dark text-white mx-2">My Cart</div>
+                <div className="btn bg-dark text-white mx-2">
+                  My Cart
+                  <span class="badge bg-secondary">2</span>
+                </div>
               </div>
             ) : (
               <div className="d-flex btn bg-dark text-white mx-2 mb-1">

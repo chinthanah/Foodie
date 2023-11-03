@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Card from "../components/Card";
 import Footer from "../components/Footer";
+import { useContext, createContext } from "react";
 
 export default function Home() {
   const [search, setsearch] = useState("");
@@ -129,9 +130,8 @@ export default function Home() {
                           <div key={filterItems._id}>
                             <div className="col-sm">
                               <Card
-                                foodname={filterItems.name}
+                                foodItems={filterItems}
                                 options={filterItems.options[0]}
-                                imgsrc={filterItems.img}
                               ></Card>
                             </div>
                           </div>
